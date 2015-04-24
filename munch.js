@@ -856,7 +856,7 @@ function module_exists(name) {
 exports.run = function() {
     // fetch the script options from CLI
     var args = require('optimist')
-                    .usage(fs.readFileSync('./usage').toString())
+                    .usage(fs.readFileSync(__dirname+'/usage').toString())
                     .demand(['view'])
                     .argv;
 
